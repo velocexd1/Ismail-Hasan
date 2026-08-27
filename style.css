@@ -35,8 +35,13 @@ nav {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(124,58,237,0.2);
 }
-.logo { font-size: 1.6rem; font-weight: 700; color: #fff; }
-.logo span { color: var(--red); }
+.nav-photo {
+  width: 42px; height: 42px; border-radius: 50%;
+  object-fit: cover; object-position: top;
+  border: 2px solid var(--violet);
+  transition: border-color 0.3s;
+}
+.nav-photo:hover { border-color: var(--red); }
 nav ul { list-style: none; display: flex; gap: 2rem; }
 nav ul a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
 nav ul a:hover { color: var(--violet-light); }
@@ -65,12 +70,12 @@ nav ul a:hover { color: var(--violet-light); }
 }
 .avatar-inner {
   width: 100%; height: 100%; border-radius: 50%;
-  background: var(--dark);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 5rem;
-  background: radial-gradient(circle, #1e1e2e, var(--dark));
+  overflow: hidden;
 }
-.avatar-inner i { color: var(--violet-light); }
+.hero-photo {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* BUTTONS */
