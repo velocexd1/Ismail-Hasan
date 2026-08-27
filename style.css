@@ -138,7 +138,7 @@ section { padding: 5rem 6%; }
 .project-icon { font-size: 2rem; color: var(--violet-light); margin-bottom: 1rem; }
 .project-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
 .project-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.2rem; }
-.center-btn { text-align: center; }
+.project-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 
 /* CONTACT */
 #contact { background: var(--dark); }
