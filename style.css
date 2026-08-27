@@ -35,13 +35,15 @@ nav {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(124,58,237,0.2);
 }
+.logo { display: flex; align-items: center; gap: 0.6rem; }
 .nav-photo {
   width: 42px; height: 42px; border-radius: 50%;
   object-fit: cover; object-position: top;
   border: 2px solid var(--violet);
   transition: border-color 0.3s;
+  display: block;
 }
-.nav-name { font-size: 1rem; font-weight: 600; color: #fff; }
+.nav-name { font-size: 1rem; font-weight: 600; color: #fff; line-height: 1; }
 .nav-name-accent { color: var(--red); }
 nav ul { list-style: none; display: flex; gap: 2rem; }
 nav ul a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
