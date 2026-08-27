@@ -41,7 +41,8 @@ nav {
   border: 2px solid var(--violet);
   transition: border-color 0.3s;
 }
-.nav-photo:hover { border-color: var(--red); }
+.nav-name { font-size: 1rem; font-weight: 600; color: #fff; }
+.nav-name-accent { color: var(--red); }
 nav ul { list-style: none; display: flex; gap: 2rem; }
 nav ul a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
 nav ul a:hover { color: var(--violet-light); }
@@ -65,8 +66,8 @@ nav ul a:hover { color: var(--violet-light); }
 .hero-avatar { display: flex; align-items: center; justify-content: center; }
 .avatar-ring {
   width: 280px; height: 280px; border-radius: 50%;
-  background: conic-gradient(var(--violet), var(--red), var(--violet));
-  padding: 4px; animation: spin 6s linear infinite;
+  background: linear-gradient(135deg, var(--violet), var(--red));
+  padding: 4px;
 }
 .avatar-inner {
   width: 100%; height: 100%; border-radius: 50%;
