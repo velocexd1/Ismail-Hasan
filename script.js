@@ -35,7 +35,13 @@ function sendMail(e) {
   const name = e.target[0].value;
   const email = e.target[1].value;
   const msg = e.target[2].value;
-  window.location.href = `mailto:ismailhasan3451@gmail.com?subject=Portfolio Contact from ${name}&body=${msg}%0A%0AFrom: ${email}`;
+  const subject = encodeURIComponent(`Hire Request from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+  window.open(`https://mail.google.com/mail/?view=cm&to=ismailhasan3451@gmail.com&su=${subject}&body=${body}`, '_blank');
+  e.target.reset();
+  const toast = document.getElementById('form-toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
 }
 
 // Fade-in on scroll for cards
