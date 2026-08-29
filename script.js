@@ -64,10 +64,12 @@ audio.addEventListener('timeupdate', () => {
 audio.addEventListener('loadedmetadata', () => { durationEl.textContent = fmt(audio.duration); });
 
 audio.addEventListener('ended', () => {
-  playIcon.className = 'fa-solid fa-play';
-  disc.classList.remove('spinning');
-  progressFill.style.width = '0%';
-  currentTimeEl.textContent = '0:00';
+  current = (current + 1) % songs.length;
+  loadSong(current);
+  document.querySelectorAll('.song-tab').forEach((t, i) => t.classList.toggle('active', i === current));
+  audio.play();
+  playIcon.className = 'fa-solid fa-pause';
+  disc.classList.add('spinning');
 });
 
 // Contact form
