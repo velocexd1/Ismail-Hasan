@@ -33,10 +33,33 @@
       </div>
     </div>
     <div class="hero-avatar">
-      <div class="avatar-ring">
-        <div class="avatar-inner">
-          <img src="photo.jpg" alt="Veloce" class="hero-photo"/>
+      <div class="music-player">
+        <div class="disc-wrapper">
+          <div class="disc" id="disc">
+            <img src="hero.jpg" alt="Veloce" class="disc-img"/>
+            <div class="disc-center"></div>
+          </div>
         </div>
+        <div class="song-tabs">
+          <button class="song-tab active" onclick="switchSong(0)">Aggressive</button>
+          <button class="song-tab" onclick="switchSong(1)">Chilling</button>
+        </div>
+        <div class="player-controls">
+          <span class="track-name" id="trackName">Veloce — Aggressive</span>
+          <div class="progress-bar" id="progressBar" onclick="seekAudio(event)">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="time-row">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+          <div class="ctrl-row">
+            <button class="vol-btn" onclick="changeVolume(-0.1)"><i class="fa-solid fa-volume-xmark"></i></button>
+            <button class="play-btn" id="playBtn" onclick="togglePlay()"><i class="fa-solid fa-play" id="playIcon"></i></button>
+            <button class="vol-btn" onclick="changeVolume(0.1)"><i class="fa-solid fa-volume-high"></i></button>
+          </div>
+        </div>
+        <audio id="audio"></audio>
       </div>
     </div>
   </section>
@@ -117,7 +140,6 @@
         <div class="contact-item"><i class="fa-brands fa-github"></i><div><h4>GitHub</h4><a href="https://github.com/velocexd1" target="_blank">github.com/velocexd1</a></div></div>
       </div>
       <form class="contact-form" onsubmit="sendMail(event)">
-        <div id="form-toast" class="form-toast"><i class="fa-solid fa-circle-check"></i> Done! Opening Gmail...</div>
         <input type="text" placeholder="Your Name" required/>
         <input type="email" placeholder="Your Email" required/>
         <textarea rows="5" placeholder="Your Message" required></textarea>
@@ -134,7 +156,6 @@
       <a href="mailto:ismailhasan3451@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
